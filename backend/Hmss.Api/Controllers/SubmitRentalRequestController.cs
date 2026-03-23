@@ -73,6 +73,18 @@ public class SubmitRentalRequestController : ControllerBase
                 $"Your rental request for {listing.Title} has been submitted."));
         }
 
+        // Notify the property owner about the new request
+        var ownerId = listing.Property?.OwnerId;
+        if (ownerId.HasValue)
+        {
+            var owner = await _userRepo.FindByIdAsync(ownerId.Value);
+            if (owner != null)
+            {
+                _email.SendAsync(new EmailMessage(owner.Email, "New Rental Request Received",
+                    $"You have received a new rental request for \"{listing.Title}\" from {tenant?.FullName ?? "a tenant"}."));
+            }
+        }
+
         return Created($"/api/rental-request/{saved.RequestId}/detail",
             new SubmissionResponseDto { RequestId = saved.RequestId, Status = saved.Status, Message = "Request submitted successfully" });
     }

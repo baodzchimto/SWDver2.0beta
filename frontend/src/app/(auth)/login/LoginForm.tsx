@@ -18,6 +18,10 @@ export function LoginForm() {
   const [error, setError] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
 
+  // 2FA verification state for SystemAdmin
+  const [pendingUserId, setPendingUserId] = useState<string | null>(null)
+  const [verificationCode, setVerificationCode] = useState('')
+
   // Show errors forwarded by Google OAuth callback or other redirects
   const urlError = searchParams.get('error')
 
@@ -27,21 +31,80 @@ export function LoginForm() {
     setIsLoading(true)
     try {
       const data = await authApi.signIn({ email, password })
-      login(data)
-      // Set cookie for middleware
-      document.cookie = `hmss_token=${data.token}; path=/; max-age=${30 * 60}; SameSite=Strict`
-      const redirect = searchParams.get('redirect')
-      // Use full page navigation to ensure middleware sees the fresh cookie
-      if (redirect) { window.location.href = redirect; return }
-      if (data.role === 'Tenant') window.location.href = '/tenant/requests'
-      else if (data.role === 'Owner') window.location.href = '/owner/property'
-      else if (data.role === 'SystemAdmin') window.location.href = '/admin/users'
-      else window.location.href = '/search'
+
+      // Admin requires 2FA - show code input
+      if (data.requiresVerification) {
+        setPendingUserId(data.userId)
+        setIsLoading(false)
+        return
+      }
+
+      completeLogin(data)
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'Login failed')
     } finally {
       setIsLoading(false)
     }
+  }
+
+  const handleVerifyCode = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!pendingUserId) return
+    setError(null)
+    setIsLoading(true)
+    try {
+      const data = await authApi.verifyCode({ userId: pendingUserId, code: verificationCode })
+      completeLogin(data)
+    } catch (err) {
+      setError(err instanceof ApiError ? err.message : 'Verification failed')
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  const completeLogin = (data: { token: string; role: string; userId: string; fullName: string; expiresAt: string }) => {
+    login(data)
+    document.cookie = `hmss_token=${data.token}; path=/; max-age=${30 * 60}; SameSite=Strict`
+    const redirect = searchParams.get('redirect')
+    if (redirect) { window.location.href = redirect; return }
+    if (data.role === 'Tenant') window.location.href = '/tenant/requests'
+    else if (data.role === 'Owner') window.location.href = '/owner/property'
+    else if (data.role === 'SystemAdmin') window.location.href = '/admin/users'
+    else window.location.href = '/search'
+  }
+
+  // 2FA verification form
+  if (pendingUserId) {
+    return (
+      <form onSubmit={handleVerifyCode} className="space-y-5">
+        <div className="rounded-lg bg-teal-50 border border-teal-100 p-4 text-sm text-teal-800">
+          <p className="font-medium">Verification Required</p>
+          <p className="mt-1 text-teal-600">A 6-digit code has been sent to your email. Please enter it below.</p>
+        </div>
+        <div className="auth-field">
+          <Input
+            label="Verification Code"
+            type="text"
+            inputMode="numeric"
+            maxLength={6}
+            value={verificationCode}
+            onChange={e => setVerificationCode(e.target.value.replace(/\D/g, ''))}
+            placeholder="Enter 6-digit code"
+            required
+            className="py-2.5 text-base text-center tracking-[0.3em] font-mono"
+          />
+        </div>
+        {error && <p className="text-sm text-red-600 animate-fade-up">{error}</p>}
+        <Button type="submit" size="lg" isLoading={isLoading} className="w-full">Verify</Button>
+        <button
+          type="button"
+          onClick={() => { setPendingUserId(null); setVerificationCode(''); setError(null) }}
+          className="w-full text-sm text-stone-500 hover:text-stone-700"
+        >
+          Back to login
+        </button>
+      </form>
+    )
   }
 
   return (

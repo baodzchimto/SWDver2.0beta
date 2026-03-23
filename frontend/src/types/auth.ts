@@ -17,6 +17,7 @@ export interface SignInResponseDto {
   role: string
   fullName: string
   expiresAt: string
+  requiresVerification?: boolean
 }
 
 export interface AuthUser {

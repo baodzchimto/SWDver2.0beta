@@ -88,8 +88,19 @@ public class ControlListingController : ControllerBase
 
         await _listingRepo.UpdateAsync(listing);
 
-        var emailMsg = _notification.CreateDisableNotification(listing);
-        _email.SendAsync(emailMsg);
+        // Email the property owner about the disabled listing
+        var ownerId = listing.Property?.OwnerId;
+        if (ownerId.HasValue)
+        {
+            var owner = await _userRepo.FindByIdAsync(ownerId.Value);
+            if (owner != null)
+            {
+                _email.SendAsync(new Gateways.Interfaces.EmailMessage(
+                    owner.Email,
+                    "Your Listing Has Been Disabled",
+                    $"Dear {owner.FullName},\n\nYour listing \"{listing.Title}\" has been disabled by an administrator.\n\nIf you believe this was done in error, please contact support."));
+            }
+        }
 
         return Ok(new ControlActionDto { ListingId = listing.ListingId, NewStatus = listing.Status, Message = "Listing archived by admin" });
     }

@@ -96,6 +96,9 @@ builder.Services.AddScoped<SearchMatchingService>();
 builder.Services.AddScoped<IMapGateway, MapboxGateway>();
 builder.Services.AddHttpClient();
 
+// In-memory cache for admin 2FA verification codes
+builder.Services.AddMemoryCache();
+
 // Phase 05 services
 builder.Services.AddScoped<IUserAccountRepository, UserAccountRepository>();
 builder.Services.AddScoped<AuthenticationLogic>();
