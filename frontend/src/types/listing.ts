@@ -10,6 +10,7 @@ export interface SearchCriteriaDto {
 
 export interface ListingSummaryDto {
   listingId: string
+  propertyId: string
   title: string
   price: number
   capacity: number
@@ -19,6 +20,16 @@ export interface ListingSummaryDto {
   status: string
 }
 
+export interface PropertySearchSummaryDto {
+  propertyId: string
+  name: string
+  address: string
+  firstImageUrl?: string
+  description?: string
+  listingCount: number
+  listings: ListingSummaryDto[]
+}
+
 export interface LocationDataDto {
   listingId: string
   lat?: number
@@ -26,14 +37,38 @@ export interface LocationDataDto {
   mapUrl?: string
 }
 
+export interface PropertyLocationDataDto {
+  propertyId: string
+  name: string
+  lat?: number
+  lng?: number
+  minPrice?: number
+  maxPrice?: number
+}
+
+export interface PropertyDetailDto {
+  propertyId: string
+  name: string
+  address: string
+  mapLocation?: string
+  description?: string
+  generalPolicies?: string
+  images: string[]
+  listings: ListingSummaryDto[]
+}
+
 export interface SearchPageResponseDto {
   summaries: ListingSummaryDto[]
   locationData: LocationDataDto[]
+  properties: PropertySearchSummaryDto[]
+  propertyLocations: PropertyLocationDataDto[]
 }
 
 export interface SearchResponseDto {
   summaries: ListingSummaryDto[]
   locationData: LocationDataDto[]
+  properties: PropertySearchSummaryDto[]
+  propertyLocations: PropertyLocationDataDto[]
   hasResults: boolean
 }
 

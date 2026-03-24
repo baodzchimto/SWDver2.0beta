@@ -212,6 +212,9 @@ namespace Hmss.Api.Migrations
                     b.Property<string>("GeneralPolicies")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImagesRef")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("MapLocation")
                         .HasMaxLength(512)
                         .HasColumnType("nvarchar(512)");
@@ -241,6 +244,7 @@ namespace Hmss.Api.Migrations
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "A comfortable hostel located in the heart of the city with easy access to transportation.",
                             GeneralPolicies = "No smoking indoors. Quiet hours from 10 PM to 7 AM. Guests must register at front desk.",
+                            ImagesRef = "[\"https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800\",\"https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800\"]",
                             Name = "Sunrise Hostel",
                             OwnerId = new Guid("00000000-0000-0000-0000-000000000002"),
                             UpdatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
@@ -252,6 +256,7 @@ namespace Hmss.Api.Migrations
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Modern residences near Hoan Kiem Lake with excellent public transport links.",
                             GeneralPolicies = "No parties or loud music. Pets not allowed. Monthly electricity billed separately.",
+                            ImagesRef = "[\"https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800\",\"https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800\",\"https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800\"]",
                             Name = "Central Park Residences",
                             OwnerId = new Guid("00000000-0000-0000-0000-000000000004"),
                             UpdatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
@@ -263,6 +268,7 @@ namespace Hmss.Api.Migrations
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Vibrant hostel on the famous backpacker street. Walking distance to Ben Thanh Market.",
                             GeneralPolicies = "Curfew at midnight. No cooking in rooms. ID required at check-in.",
+                            ImagesRef = "[\"https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800\",\"https://images.unsplash.com/photo-1590490360182-c33d7aaf884d?w=800\"]",
                             Name = "Saigon Garden Hostel",
                             OwnerId = new Guid("00000000-0000-0000-0000-000000000005"),
                             UpdatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
@@ -274,6 +280,7 @@ namespace Hmss.Api.Migrations
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Peaceful guesthouse 5 minutes walk from My Khe Beach with sea breeze views.",
                             GeneralPolicies = "No sandy shoes inside. Towels provided. Checkout by 11 AM.",
+                            ImagesRef = "[\"https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800\",\"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800\",\"https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800\"]",
                             Name = "Beachside Retreat",
                             OwnerId = new Guid("00000000-0000-0000-0000-000000000005"),
                             UpdatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
@@ -285,6 +292,7 @@ namespace Hmss.Api.Migrations
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Cozy highland lodge surrounded by pine forests. Cool climate year-round.",
                             GeneralPolicies = "Blankets and heater provided. No campfires on premises. Respect quiet hours 9 PM onward.",
+                            ImagesRef = "[\"https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=800\",\"https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=800\"]",
                             Name = "Mountain View Lodge",
                             OwnerId = new Guid("00000000-0000-0000-0000-000000000006"),
                             UpdatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
@@ -296,6 +304,7 @@ namespace Hmss.Api.Migrations
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Description = "Budget-friendly house near HCMC University of Technology. Ideal for students.",
                             GeneralPolicies = "Students preferred. Study quiet hours from 8 PM to 6 AM. Shared kitchen available.",
+                            ImagesRef = "[\"https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800\",\"https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800\"]",
                             Name = "University Quarter House",
                             OwnerId = new Guid("00000000-0000-0000-0000-000000000007"),
                             UpdatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)

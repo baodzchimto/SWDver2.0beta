@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\pgb31\\hmss-app\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|c:\\users\\pgb31\\hmss-app\\backend\\hmss.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|solutionrelative:hmss.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|c:\\users\\pgb31\\hmss-app\\backend\\hmss.api\\controllers\\propertycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|solutionrelative:hmss.api\\controllers\\propertycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|c:\\users\\pgb31\\hmss-app\\backend\\hmss.api\\controllers\\roomsearchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|solutionrelative:hmss.api\\controllers\\roomsearchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|c:\\users\\pgb31\\hmss-app\\backend\\hmss.api\\controllers\\roomlistingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|solutionrelative:hmss.api\\controllers\\roomlistingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|c:\\users\\pgb31\\hmss-app\\backend\\hmss.api\\auth\\jwtconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|solutionrelative:hmss.api\\auth\\jwtconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|c:\\users\\pgb31\\hmss-app\\backend\\hmss.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|solutionrelative:hmss.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|c:\\users\\pgb31\\hmss-app\\backend\\hmss.api\\controllers\\roomsearchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|solutionrelative:hmss.api\\controllers\\roomsearchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|c:\\users\\pgb31\\hmss-app\\backend\\hmss.api\\controllers\\roomlistingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|solutionrelative:hmss.api\\controllers\\roomlistingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|c:\\users\\pgb31\\hmss-app\\backend\\hmss.api\\hmss.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
@@ -45,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Migrations\\20260321151123_UpdateChatfeatures.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Hmss.Api\\Migrations\\20260321151123_UpdateChatfeatures.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|c:\\users\\pgb31\\hmss-app\\backend\\hmss.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|solutionrelative:hmss.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A60B7AD5-3705-445F-A9CB-2AFC9C1912A4}|Hmss.Api\\Hmss.Api.csproj|c:\\users\\pgb31\\hmss-app\\backend\\hmss.api\\logic\\roomlistinglogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -94,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,46 +118,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "JwtConfig.cs",
-              "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Auth\\JwtConfig.cs",
-              "RelativeDocumentMoniker": "Hmss.Api\\Auth\\JwtConfig.cs",
-              "ToolTip": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Auth\\JwtConfig.cs",
-              "RelativeToolTip": "Hmss.Api\\Auth\\JwtConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T01:42:12.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "JwtTokenService.cs",
-              "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Auth\\JwtTokenService.cs",
-              "RelativeDocumentMoniker": "Hmss.Api\\Auth\\JwtTokenService.cs",
-              "ToolTip": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Auth\\JwtTokenService.cs",
-              "RelativeToolTip": "Hmss.Api\\Auth\\JwtTokenService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T01:42:11.583Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "RoomSearchController.cs",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Controllers\\RoomSearchController.cs",
               "RelativeDocumentMoniker": "Hmss.Api\\Controllers\\RoomSearchController.cs",
               "ToolTip": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Controllers\\RoomSearchController.cs",
               "RelativeToolTip": "Hmss.Api\\Controllers\\RoomSearchController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-23T01:15:06.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T01:15:06.902Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "20260321173603_Initial create.cs",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Migrations\\20260321173603_Initial create.cs",
               "RelativeDocumentMoniker": "Hmss.Api\\Migrations\\20260321173603_Initial create.cs",
@@ -161,12 +138,11 @@
               "RelativeToolTip": "Hmss.Api\\Migrations\\20260321173603_Initial create.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T17:36:04.063Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T17:36:04.063Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "RoomListing.cs",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Entities\\RoomListing.cs",
               "RelativeDocumentMoniker": "Hmss.Api\\Entities\\RoomListing.cs",
@@ -178,7 +154,69 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Hmss.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Program.cs",
+              "RelativeToolTip": "Hmss.Api\\Program.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAgwIsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T20:49:48.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JwtConfig.cs",
+              "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Auth\\JwtConfig.cs",
+              "RelativeDocumentMoniker": "Hmss.Api\\Auth\\JwtConfig.cs",
+              "ToolTip": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Auth\\JwtConfig.cs",
+              "RelativeToolTip": "Hmss.Api\\Auth\\JwtConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T01:42:12.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PropertyController.cs",
+              "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Controllers\\PropertyController.cs",
+              "RelativeDocumentMoniker": "Hmss.Api\\Controllers\\PropertyController.cs",
+              "ToolTip": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Controllers\\PropertyController.cs",
+              "RelativeToolTip": "Hmss.Api\\Controllers\\PropertyController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T10:31:14.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RoomListingController.cs",
+              "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Controllers\\RoomListingController.cs",
+              "RelativeDocumentMoniker": "Hmss.Api\\Controllers\\RoomListingController.cs",
+              "ToolTip": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Controllers\\RoomListingController.cs",
+              "RelativeToolTip": "Hmss.Api\\Controllers\\RoomListingController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T01:47:09.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Auth\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "Hmss.Api\\Auth\\JwtTokenService.cs",
+              "ToolTip": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Auth\\JwtTokenService.cs",
+              "RelativeToolTip": "Hmss.Api\\Auth\\JwtTokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T01:42:11.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "20260321152605_makechatmessagerequestidnonnullable.cs",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Migrations\\20260321152605_makechatmessagerequestidnonnullable.cs",
               "RelativeDocumentMoniker": "Hmss.Api\\Migrations\\20260321152605_makechatmessagerequestidnonnullable.cs",
@@ -190,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "HmssDbContext.cs",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Data\\HmssDbContext.cs",
               "RelativeDocumentMoniker": "Hmss.Api\\Data\\HmssDbContext.cs",
@@ -202,19 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Program.cs",
-              "RelativeDocumentMoniker": "Hmss.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Program.cs",
-              "RelativeToolTip": "Hmss.Api\\Program.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAswJYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T20:49:48.295Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "CancellationResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\DTOs\\RentalRequest\\CancellationResponseDto.cs",
               "RelativeDocumentMoniker": "Hmss.Api\\DTOs\\RentalRequest\\CancellationResponseDto.cs",
@@ -226,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\appsettings.json",
               "RelativeDocumentMoniker": "Hmss.Api\\appsettings.json",
@@ -234,12 +260,11 @@
               "RelativeToolTip": "Hmss.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-18T20:23:43.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T20:23:43.905Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Hmss.Api.http",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Hmss.Api.http",
               "RelativeDocumentMoniker": "Hmss.Api\\Hmss.Api.http",
@@ -247,25 +272,11 @@
               "RelativeToolTip": "Hmss.Api\\Hmss.Api.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-03-23T01:12:58.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-23T01:12:58.423Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RoomListingController.cs",
-              "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Controllers\\RoomListingController.cs",
-              "RelativeDocumentMoniker": "Hmss.Api\\Controllers\\RoomListingController.cs",
-              "ToolTip": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Controllers\\RoomListingController.cs",
-              "RelativeToolTip": "Hmss.Api\\Controllers\\RoomListingController.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwA0AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T01:47:09.61Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "RentalRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\DTOs\\RentalRequest\\RentalRequestDto.cs",
               "RelativeDocumentMoniker": "Hmss.Api\\DTOs\\RentalRequest\\RentalRequestDto.cs",
@@ -277,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "RoomListingLogic.cs",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Logic\\RoomListingLogic.cs",
               "RelativeDocumentMoniker": "Hmss.Api\\Logic\\RoomListingLogic.cs",
@@ -289,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "20260321151123_UpdateChatfeatures.cs",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Migrations\\20260321151123_UpdateChatfeatures.cs",
               "RelativeDocumentMoniker": "Hmss.Api\\Migrations\\20260321151123_UpdateChatfeatures.cs",
@@ -301,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "AdminDecisionResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\DTOs\\Admin\\AdminDecisionResponseDto.cs",
               "RelativeDocumentMoniker": "Hmss.Api\\DTOs\\Admin\\AdminDecisionResponseDto.cs",
@@ -313,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ViewRoomController.cs",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Controllers\\ViewRoomController.cs",
               "RelativeDocumentMoniker": "Hmss.Api\\Controllers\\ViewRoomController.cs",
@@ -325,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "PropertyLogic.cs",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Logic\\PropertyLogic.cs",
               "RelativeDocumentMoniker": "Hmss.Api\\Logic\\PropertyLogic.cs",
@@ -337,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "StatusChangeResult.cs",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Entities\\StatusChangeResult.cs",
               "RelativeDocumentMoniker": "Hmss.Api\\Entities\\StatusChangeResult.cs",
@@ -349,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "OwnerVerification.cs",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Entities\\OwnerVerification.cs",
               "RelativeDocumentMoniker": "Hmss.Api\\Entities\\OwnerVerification.cs",
@@ -361,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "AuthenticationLogic.cs",
               "DocumentMoniker": "C:\\Users\\pgb31\\hmss-app\\backend\\Hmss.Api\\Logic\\AuthenticationLogic.cs",
               "RelativeDocumentMoniker": "Hmss.Api\\Logic\\AuthenticationLogic.cs",

@@ -54,6 +54,49 @@ public class MapboxGateway : IMapGateway
         return result;
     }
 
+    public async Task<List<PropertyLocationDataDto>> GetPropertyLocationDataAsync(List<PropertySearchSummaryDto> properties)
+    {
+        var token = _config["Mapbox:AccessToken"];
+        if (string.IsNullOrWhiteSpace(token))
+            return new List<PropertyLocationDataDto>();
+
+        var result = new List<PropertyLocationDataDto>();
+        // Deduplicate geocoding by address
+        var geocodeCache = new Dictionary<string, (double lat, double lng)>();
+
+        foreach (var prop in properties)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(prop.Address)) continue;
+
+                if (!geocodeCache.TryGetValue(prop.Address, out var coords))
+                {
+                    var (lat, lng) = await GeocodeAsync(prop.Address, token);
+                    if (!lat.HasValue || !lng.HasValue) continue;
+                    coords = (lat.Value, lng.Value);
+                    geocodeCache[prop.Address] = coords;
+                }
+
+                var prices = prop.Listings.Select(l => l.Price).ToList();
+                result.Add(new PropertyLocationDataDto
+                {
+                    PropertyId = prop.PropertyId,
+                    Name = prop.Name,
+                    Lat = coords.lat,
+                    Lng = coords.lng,
+                    MinPrice = prices.Count > 0 ? prices.Min() : null,
+                    MaxPrice = prices.Count > 0 ? prices.Max() : null
+                });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning("Mapbox geocoding failed for property {Id}: {Msg}", prop.PropertyId, ex.Message);
+            }
+        }
+        return result;
+    }
+
     public async Task<MapDto> GetMapDataAsync(string locationData)
     {
         var token = _config["Mapbox:AccessToken"];

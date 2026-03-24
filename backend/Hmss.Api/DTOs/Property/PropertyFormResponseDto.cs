@@ -15,4 +15,5 @@ public class PropertyFormResponseDto
     public string? MapLocation { get; set; }
     public string? Description { get; set; }
     public string? GeneralPolicies { get; set; }
+    public List<string> ImageUrls { get; set; } = new();
 }

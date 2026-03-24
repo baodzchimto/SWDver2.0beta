@@ -11,12 +11,14 @@ namespace Hmss.Api.Controllers;
 public class RoomSearchController : ControllerBase
 {
     private readonly IRoomListingRepository _listingRepo;
+    private readonly IPropertyRepository _propertyRepo;
     private readonly SearchMatchingService _searchService;
     private readonly IMapGateway _mapsGateway;
 
-    public RoomSearchController(IRoomListingRepository listingRepo, SearchMatchingService searchService, IMapGateway mapsGateway)
+    public RoomSearchController(IRoomListingRepository listingRepo, IPropertyRepository propertyRepo, SearchMatchingService searchService, IMapGateway mapsGateway)
     {
         _listingRepo = listingRepo;
+        _propertyRepo = propertyRepo;
         _searchService = searchService;
         _mapsGateway = mapsGateway;
     }
@@ -26,8 +28,10 @@ public class RoomSearchController : ControllerBase
     {
         var listings = await _listingRepo.FindPublishedListingsAsync();
         var summaries = _searchService.BuildListingSummaries(listings);
+        var properties = _searchService.BuildPropertySummaries(listings);
         var locationData = await _mapsGateway.GetLocationDataAsync(listings);
-        return Ok(new SearchPageResponseDto { Summaries = summaries, LocationData = locationData });
+        var propertyLocations = await _mapsGateway.GetPropertyLocationDataAsync(properties);
+        return Ok(new SearchPageResponseDto { Summaries = summaries, LocationData = locationData, Properties = properties, PropertyLocations = propertyLocations });
     }
 
     [HttpPost("search")]
@@ -36,8 +40,10 @@ public class RoomSearchController : ControllerBase
         var allListings = await _listingRepo.FindPublishedListingsAsync();
         var filtered = _searchService.FilterByCriteria(allListings, criteria);
         var summaries = _searchService.BuildListingSummaries(filtered);
+        var properties = _searchService.BuildPropertySummaries(filtered);
         var locationData = await _mapsGateway.GetLocationDataAsync(filtered);
-        return Ok(new SearchResponseDto { Summaries = summaries, LocationData = locationData, HasResults = filtered.Count > 0 });
+        var propertyLocations = await _mapsGateway.GetPropertyLocationDataAsync(properties);
+        return Ok(new SearchResponseDto { Summaries = summaries, LocationData = locationData, Properties = properties, PropertyLocations = propertyLocations, HasResults = filtered.Count > 0 });
     }
 
     [HttpGet("listing/{listingId:guid}")]

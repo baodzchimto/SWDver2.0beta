@@ -2,7 +2,7 @@ import { apiRequest } from '@/lib/api/api-client'
 import type {
   SearchCriteriaDto, SearchPageResponseDto, SearchResponseDto,
   RoomDetailDto, MapDto, RoomListingDraftDto, ListingResponseDto,
-  PublicationEligibilityDto, AcceptedArrangementDto
+  PublicationEligibilityDto, AcceptedArrangementDto, PropertyDetailDto
 } from '@/types/listing'
 
 export const listingsApi = {
@@ -24,4 +24,6 @@ export const listingsApi = {
   reopenListing: (requestId: string) => apiRequest<ListingResponseDto>(`/api/listing/${requestId}/reopen`, { method: 'POST' }),
   reopenByListing: (listingId: string) => apiRequest<{ id: string; newStatus: string; message: string }>(`/api/listing/reopen-by-listing/${listingId}`, { method: 'POST' }),
   getOwnerListings: () => apiRequest<ListingResponseDto[]>('/api/listing/my'),
+  getPropertyDetails: (id: string) => apiRequest<PropertyDetailDto>(`/api/property-view/${id}`),
+  getPropertyMap: (id: string) => apiRequest<MapDto>(`/api/property-view/${id}/map`),
 }

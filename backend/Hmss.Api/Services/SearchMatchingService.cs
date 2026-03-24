@@ -14,6 +14,7 @@ public class SearchMatchingService
         {
             var loc = criteria.Location.ToLowerInvariant();
             query = query.Where(x => (x.Property?.Address ?? string.Empty).ToLowerInvariant().Contains(loc)
+                || (x.Property?.Name ?? string.Empty).ToLowerInvariant().Contains(loc)
                 || x.Title.ToLowerInvariant().Contains(loc));
         }
 
@@ -67,6 +68,7 @@ public class SearchMatchingService
             return new ListingSummaryDto
             {
                 ListingId = x.ListingId,
+                PropertyId = x.PropertyId,
                 Title = x.Title,
                 Price = x.Price,
                 Capacity = x.Capacity,
@@ -76,5 +78,39 @@ public class SearchMatchingService
                 Status = x.Status
             };
         }).ToList();
+    }
+
+    /// <summary>Group listings by property and build property search summaries</summary>
+    public List<PropertySearchSummaryDto> BuildPropertySummaries(List<RoomListing> listings)
+    {
+        return listings
+            .Where(x => x.Property != null)
+            .GroupBy(x => x.PropertyId)
+            .Select(group =>
+            {
+                var property = group.First().Property!;
+                string? firstImage = null;
+                if (!string.IsNullOrWhiteSpace(property.ImagesRef))
+                {
+                    try
+                    {
+                        var imgs = JsonSerializer.Deserialize<List<string>>(property.ImagesRef);
+                        firstImage = imgs?.FirstOrDefault();
+                    }
+                    catch { }
+                }
+
+                return new PropertySearchSummaryDto
+                {
+                    PropertyId = property.PropertyId,
+                    Name = property.Name,
+                    Address = property.Address,
+                    Description = property.Description,
+                    FirstImageUrl = firstImage,
+                    ListingCount = group.Count(),
+                    Listings = BuildListingSummaries(group.ToList())
+                };
+            })
+            .ToList();
     }
 }
